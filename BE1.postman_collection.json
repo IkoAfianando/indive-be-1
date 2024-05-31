@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "b52b5f87-aa18-46aa-a220-6b20873dab8d",
+		"name": "BE1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18803644"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"iko aifananod\",\n  \"email\": \"ikoafianando123@gmail.com\",\n  \"address\": \"rejoagung\",\n  \"phone\": \"+6285606316903\",\n  \"password\": \"ikoafian\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VERIFY LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ikoafianando123@gmail.com\",\n    \"code\": \"XUsaWtat/Bs53N1Olp8J4Q==\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/verify/email",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"verify",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ikoafianando123@gmail.com\",\n    \"password\": \"ikoafian\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AUTH GOOGLE LOGIN",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ikoafianando123@gmail.com\",\n    \"password\": \"ikoafian\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/google/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"google",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DASHBOARD",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IiIsImV4cCI6MTcxNjU2NTUyMX0.K24Rp1HxDUWCjCsuZIAk8z3ln_znaJzcNAqqY5oDIyo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/dashboard",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

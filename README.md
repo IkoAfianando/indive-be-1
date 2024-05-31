@@ -43,8 +43,9 @@ Before getting started, ensure you have the following installed on your machine:
 
     Replace the values with your own. You can get the `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` by creating a new project on the Google Developer Console. For the `SMTP` variables, you can get them from your Mailtrap account. The `MYSQL_URL` should be in the format `username:password@tcp(
 4. **Run the application**:
-
+   load .env file 
    ```bash
+   export $(grep -v '^#' .env | xargs)
    go run main.go
    ```
 
